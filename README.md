@@ -83,10 +83,11 @@ startup.
 
 ## Troubleshooting the login
 
-- **`Device has been logged out` / `Session is corrupted or invalid`** - WhatsApp revoked
-  that device, so the old string can never work again. Run `reset-session.bat`, pair a new
-  session at <https://pair-tesla-md.onrender.com>, then start the bot and paste the newest
-  string. If you paired several times, the last one is the only valid one.
+- **`Device has been logged out`** - WhatsApp revoked that device, so the old string can
+  never work again. The launcher notices this itself, deletes `session.txt` and the `session`
+  folder, then stops. Start the bot again (`reset-session.bat` does the same by hand), pair a
+  new session at <https://pair-tesla-md.onrender.com> and paste the newest string. If you
+  paired several times, the last one is the only valid one.
 - **`SESSION could not be read` / `not valid base64`** - the string was cut short while
   copying. Use the page's copy button and paste it at the bot's `Session:` prompt in one go.
 - **`Session opened on another device or server`** - another copy of the bot is running with
