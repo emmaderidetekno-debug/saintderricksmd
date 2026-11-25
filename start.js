@@ -24,10 +24,14 @@ async function main() {
   try { require('./tools/rebrand-core').rebrandCore(); } catch (error) { console.error('[REBRAND] skipped:', error.message); }
 
   const credsPath = path.join(__dirname, 'session', 'creds.json');
-  if (!fs.existsSync(credsPath)) {
+  const sessionFile = path.join(__dirname, 'session.txt');
+  // A saved session.txt always wins over the stored creds, so pasting a fresh
+  // session replaces one WhatsApp has already logged out. Without this the old
+  // creds.json was reused and the bot kept reporting "Device has been logged out".
+  if (fs.existsSync(sessionFile) || !fs.existsSync(credsPath)) {
     const session = await loadSession();
-    if (!session) process.exit(1);
-    process.env.SESSION = session;
+    if (session) process.env.SESSION = session;
+    else if (!fs.existsSync(credsPath)) process.exit(1);
   }
 
   // Auto-join is not part of this project. The core falls back to a built-in

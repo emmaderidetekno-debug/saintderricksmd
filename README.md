@@ -81,6 +81,19 @@ repository, so its command list and internals change with the upstream project. 
 downloader is obfuscated and the remote URL is part of the design - editing it breaks
 startup.
 
+## Troubleshooting the login
+
+- **`Device has been logged out` / `Session is corrupted or invalid`** - WhatsApp revoked
+  that device, so the old string can never work again. Run `reset-session.bat`, pair a new
+  session at <https://pair-tesla-md.onrender.com>, then start the bot and paste the newest
+  string. If you paired several times, the last one is the only valid one.
+- **`SESSION could not be read` / `not valid base64`** - the string was cut short while
+  copying. Use the page's copy button and paste it at the bot's `Session:` prompt in one go.
+- **`Session opened on another device or server`** - another copy of the bot is running with
+  the same session. Stop it (close the other window) and start only one.
+- `session/creds.json` is written after a successful login, so later starts reuse it. Delete
+  `session.txt` and the `session` folder (or run `reset-session.bat`) to start clean.
+
 ## Security notes
 
 - Treat `SESSION` like a password: it grants full access to the linked WhatsApp account.
