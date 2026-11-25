@@ -21,9 +21,10 @@ async function main() {
   }
   try { require('./tools/rebrand-core').rebrandCore(); } catch (error) { console.error('[REBRAND] skipped:', error.message); }
 
-  // Auto-join is not part of this project: drop it from the environment so the
-  // core cannot put the deployer's bot into groups behind their back.
-  delete process.env.AUTO_JOIN;
+  // Auto-join is not part of this project. The core falls back to a built-in
+  // group code when the variable is missing, so it must be set to an empty
+  // value rather than deleted.
+  process.env.AUTO_JOIN = '';
 
   require('./index.js');
 }

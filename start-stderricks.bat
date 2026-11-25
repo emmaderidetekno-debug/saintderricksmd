@@ -11,7 +11,9 @@ rem Owner numbers: country code, digits only, comma separated (optional).
 set "DEV="
 
 rem A file is safer than pasting: cmd truncates very long pasted values.
-if exist "session.txt" set /p "SESSION=<session.txt"
+if exist "session.txt" (
+  for /f "usebackq delims=" %%L in ("session.txt") do call set "SESSION=%%SESSION%%%%L"
+)
 
 if not "%SESSION%"=="" goto :run
 
