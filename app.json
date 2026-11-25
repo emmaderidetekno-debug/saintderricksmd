@@ -1,0 +1,48 @@
+{
+  "name": "St.Derricks MD",
+  "description": "A bot beyond the stars",
+  "stack": "heroku-26",
+  "keywords": [
+    "whatsapp-bot",
+    "stderricks",
+    "baileys-md",
+    "md-bot"
+  ],
+  "website": "https://github.com/emmaderidetekno-debug/saintderricksmd#readme",
+  "repository": "https://github.com/emmaderidetekno-debug/saintderricksmd",
+  "logo": "https://raw.githubusercontent.com/emmaderidetekno-debug/saintderricksmd/main/assets/stderricks-hero.jpg",
+  "success_url": "/",
+  "env": {
+    "DEV": {
+      "description": "Put any phone numbers you want to be bot owner without + or spaces \",\" Ex: 254114520835,27748379216  ",
+      "value": "",
+      "required": false
+    },
+    "BAD_WORD": {
+      "description": "List words separated witj commas that will be considered as bad and will trigger bot to kick. Example: fuck, pussy, hoe",
+      "value": "fuck,pussy,slut,bitch,cock,stupid",
+      "required": false
+    },
+  "SESSION": {
+      "description": "Required base64-encoded WhatsApp credentials JSON. Keep it private.",
+      "required": true
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    }
+  ],
+    "addons": [
+      {
+    "plan": "heroku-postgresql:essential-0"
+      }
+    ]
+    }
+
