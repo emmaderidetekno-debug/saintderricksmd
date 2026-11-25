@@ -4,6 +4,9 @@ cd /d "%~dp0"
 
 rem Paste your session string here to skip the prompt (optional).
 set "SESSION="
+rem Uncomment to serve the page on a fixed port while testing locally.
+rem set PORT=4324
+
 rem Owner numbers: country code, digits only, comma separated (optional).
 set "DEV="
 
