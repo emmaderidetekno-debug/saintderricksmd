@@ -1,6 +1,7 @@
 node_modules/
 .env
 app_session/
+session/
 *.log
 index.js
 tesla.js
