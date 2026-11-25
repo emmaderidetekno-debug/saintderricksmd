@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>St.Derricks MD</title>
-<meta name="description" content="St.Derricks MD is a multi-device WhatsApp bot with 300+ commands: group tools, AI chat, downloads, media, sudo control and more.">
+<title>St. Derricks MD</title>
+<meta name="description" content="St. Derricks MD is a multi-device WhatsApp bot with 300+ commands: group tools, AI chat, downloads, media, sudo control and more.">
 <meta name="theme-color" content="#0b1210">
-<meta property="og:title" content="St.Derricks MD WhatsApp Bot">
+<meta property="og:title" content="St. Derricks MD WhatsApp Bot">
 <meta property="og:description" content="A multi-device WhatsApp bot with 300+ commands.">
-<meta property="og:image" content="https://raw.githubusercontent.com/emmaderidetekno-debug/saintderricksmd/main/assets/stderricks-hero.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/emmaderidetekno-debug/saintderricksmd/main/assets/stderricks-logo.png">
 <style>
 :root {
   --bg: #0b1210;
@@ -153,7 +153,7 @@ footer .cols { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-bottom: 10p
 
 <header class="top">
   <div class="wrap bar">
-    <a class="brand mono" href="#top">St.Derricks<span> MD</span></a>
+    <a class="brand mono" href="#top">St. Derricks<span> MD</span></a>
     <nav class="links" aria-label="Main">
       <a href="#features">Features</a>
       <a href="#deploy">Deploy</a>
@@ -168,9 +168,10 @@ footer .cols { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-bottom: 10p
 
   <div class="hero">
     <div>
+      <img class="logo" src="assets/stderricks-logo.png" alt="St. Derricks MD" width="150" height="150" style="display:block;margin:0 0 18px">
       <span class="eyebrow mono">WhatsApp multi-device bot</span>
       <h1>Automation with <em>armour</em>.</h1>
-      <p class="lead">St.Derricks MD brings group control, AI chat, downloaders, media tools and owner utilities to WhatsApp, in one fast bot you host yourself.</p>
+      <p class="lead">St. Derricks MD brings group control, AI chat, downloaders, media tools and owner utilities to WhatsApp, in one fast bot you host yourself.</p>
       <div class="cta">
         <a class="btn primary" href="https://pair-tesla-md.onrender.com" target="_blank" rel="noopener noreferrer">Pair WhatsApp</a>
         <a class="btn" href="https://heroku.com/deploy?template=https://github.com/emmaderidetekno-debug/saintderricksmd" target="_blank" rel="noopener noreferrer">Deploy on Heroku</a>
@@ -179,7 +180,7 @@ footer .cols { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-bottom: 10p
       </div>
     </div>
     <div class="shot">
-      <img src="assets/stderricks-hero.jpg" alt="St.Derricks MD" width="1248" height="832" loading="eager" onerror="this.parentNode.style.display='none'">
+      <img src="assets/stderricks-hero.jpg" alt="St. Derricks MD" width="1248" height="832" loading="eager" onerror="this.parentNode.style.display='none'">
     </div>
   </div>
 
@@ -249,7 +250,7 @@ footer .cols { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-bottom: 10p
     <details><summary>The status says reconnecting or failed</summary><p>Check the Heroku logs. A message about a logged out device means you need to pair again. A message about a replaced connection means another copy is running on the same session.</p></details>
     <details><summary>Can two apps share one session?</summary><p>No. WhatsApp allows one connection per session, so two copies keep kicking each other off and can end in a logout.</p></details>
     <details><summary>How do I update the bot?</summary><p>Plugins and core files are downloaded from the files repo each time the app starts, so a restart is enough. The owner command update also redeploys.</p></details>
-    <details><summary>Is this affiliated with WhatsApp?</summary><p>No. St.Derricks MD is an independent project. Use it responsibly and follow WhatsApp's terms.</p></details>
+    <details><summary>Is this affiliated with WhatsApp?</summary><p>No. St. Derricks MD is an independent project. Use it responsibly and follow WhatsApp's terms.</p></details>
   </section>
 </main>
 
@@ -258,7 +259,7 @@ footer .cols { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-bottom: 10p
     <div class="cols">
       <a href="https://github.com/emmaderidetekno-debug/saintderricksmd" target="_blank" rel="noopener noreferrer">Source</a>
     </div>
-    St.Derricks MD · built by St.Derricks · hosted by you
+    St. Derricks MD · built by St. Derricks · hosted by you
   </div>
 </footer>
 
@@ -281,7 +282,7 @@ footer .cols { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-bottom: 10p
     starting:      ['Starting',      's-warn', 'The bot is starting up.'],
     connecting:    ['Connecting',    's-warn', 'Connecting to WhatsApp.'],
     awaiting_auth: ['Needs session', 's-bad',  'WhatsApp needs a fresh session. Pair again and set SESSION.'],
-    connected:     ['Connected',     's-ok',   'St.Derricks MD is connected and running.'],
+    connected:     ['Connected',     's-ok',   'St. Derricks MD is connected and running.'],
     reconnecting:  ['Reconnecting',  's-warn', 'The bot lost its connection and is reconnecting.'],
     failed:        ['Offline',       's-bad',  'The bot could not stay connected. Check the Heroku logs.'],
     disabled:      ['Disabled',      's-idle', 'The bot is switched off in this deployment.']

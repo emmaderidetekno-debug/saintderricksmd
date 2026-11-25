@@ -1,7 +1,7 @@
 {
   "name": "stderricks-md",
   "version": "3.0.0",
-  "description": "St.Derricks MD WhatsApp multi-device bot",
+  "description": "St. Derricks MD WhatsApp multi-device bot",
   "main": "start.js",
   "type": "commonjs",
   "scripts": {
@@ -17,7 +17,7 @@
     "stderricks-md",
     "whatsapp-multi-device"
   ],
-  "author": "St.Derricks",
+  "author": "St. Derricks",
   "license": "MIT",
   "dependencies": {
     "@hapi/boom": "^10.0.0",

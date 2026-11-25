@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="assets/stderricks-hero.jpg" alt="St.Derricks MD" width="760">
+<img src="assets/stderricks-logo.png" alt="St. Derricks MD" width="260">
 
-# **St.Derricks MD**
+# **St. Derricks MD**
 
 **A security-minded WhatsApp multi-device bot** · **Node.js 22+**
 
@@ -14,9 +14,9 @@
 
 ---
 
-## Built by St.Derricks
+## Built by St. Derricks
 
-St.Derricks MD is a multi-device WhatsApp bot with 300+ commands: group management,
+St. Derricks MD is a multi-device WhatsApp bot with 300+ commands: group management,
 AI chat, downloaders, media and sticker tools, owner utilities and live settings -
 all controlled from chat, and all hosted by you.
 

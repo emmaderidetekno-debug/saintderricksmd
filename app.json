@@ -1,5 +1,5 @@
 {
-  "name": "St.Derricks MD",
+  "name": "St. Derricks MD",
   "description": "A bot beyond the stars",
   "stack": "heroku-26",
   "keywords": [
@@ -10,12 +10,12 @@
   ],
   "website": "https://github.com/emmaderidetekno-debug/saintderricksmd#readme",
   "repository": "https://github.com/emmaderidetekno-debug/saintderricksmd",
-  "logo": "https://raw.githubusercontent.com/emmaderidetekno-debug/saintderricksmd/main/assets/stderricks-hero.jpg",
+  "logo": "https://raw.githubusercontent.com/emmaderidetekno-debug/saintderricksmd/main/assets/stderricks-logo.png",
   "success_url": "/",
   "env": {
     "DEV": {
-      "description": "Put any phone numbers you want to be bot owner without + or spaces \",\" Ex: 254114520835,27748379216  ",
-      "value": "",
+      "description": "Put any phone numbers you want to be bot owner without + or spaces \",\" Ex: 254702230092  ",
+      "value": "254702230092",
       "required": false
     },
     "BAD_WORD": {
