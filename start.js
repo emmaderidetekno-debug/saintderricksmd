@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
+const { loadSession } = require('./tools/session-input');
+
 const ENTRY = path.join(__dirname, 'index.js');
 const TRIES = Math.max(1, Number(process.env.CORE_START_TRIES) || 5);
 const WAIT_MS = Number(process.env.CORE_START_WAIT_MS) || 10000;
@@ -20,6 +22,13 @@ async function main() {
     process.exit(1);
   }
   try { require('./tools/rebrand-core').rebrandCore(); } catch (error) { console.error('[REBRAND] skipped:', error.message); }
+
+  const credsPath = path.join(__dirname, 'session', 'creds.json');
+  if (!fs.existsSync(credsPath)) {
+    const session = await loadSession();
+    if (!session) process.exit(1);
+    process.env.SESSION = session;
+  }
 
   // Auto-join is not part of this project. The core falls back to a built-in
   // group code when the variable is missing, so it must be set to an empty

@@ -44,8 +44,10 @@ all controlled from chat, and all hosted by you.
 3. Get your session string from the pairing page: <https://pair-tesla-md.onrender.com>
    Enter your number (country code, no `+`, no spaces), then approve the link request in
    WhatsApp under **Linked devices**.
-4. Open `start-stderricks.bat` in Notepad, paste the string after `SESSION=`, save.
-5. Double-click `start-stderricks.bat`.
+4. Double-click `start-stderricks.bat` and paste the string at the **Session:** prompt.
+
+The session is saved to `session.txt` and reused on the next start, so you only paste it once.
+To replace it, delete `session.txt` (and the `session` folder) and start again.
 
 Or from a terminal:
 

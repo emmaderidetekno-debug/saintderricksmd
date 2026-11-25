@@ -2,36 +2,16 @@
 setlocal
 cd /d "%~dp0"
 
-rem Paste your session string here to skip the prompt (optional).
-set "SESSION="
+rem The session is asked for by start.js, not by this file: cmd truncates
+rem long pasted values, which used to cut the session in half.
+rem A saved session.txt is reused automatically.
+
 rem Uncomment to serve the page on a fixed port while testing locally.
 rem set PORT=4324
 
 rem Owner numbers: country code, digits only, comma separated (optional).
 set "DEV="
 
-rem A file is safer than pasting: cmd truncates very long pasted values.
-if exist "session.txt" (
-  for /f "usebackq delims=" %%L in ("session.txt") do call set "SESSION=%%SESSION%%%%L"
-)
-
-if not "%SESSION%"=="" goto :run
-
-echo.
-echo   St. Derricks MD - local start
-echo   ----------------------------
-echo   Paste your session string and press Enter.
-echo   Get it at https://pair-tesla-md.onrender.com
-echo.
-set /p "SESSION=Session: "
-if "%SESSION%"=="" (
-  echo.
-  echo No session entered - nothing to start.
-  pause
-  exit /b 1
-)
-
-:run
 echo.
 echo Starting St. Derricks MD...
 node start.js
