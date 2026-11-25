@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/stderricks-logo.png" alt="St. Derricks MD" width="260">
+<img src="assets/stderricks-logo.jpg" alt="St. Derricks MD" width="260">
 
 # **St. Derricks MD**
 
