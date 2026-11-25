@@ -10,6 +10,9 @@ rem set PORT=4324
 rem Owner numbers: country code, digits only, comma separated (optional).
 set "DEV="
 
+rem A file is safer than pasting: cmd truncates very long pasted values.
+if exist "session.txt" set /p "SESSION=<session.txt"
+
 if not "%SESSION%"=="" goto :run
 
 echo.

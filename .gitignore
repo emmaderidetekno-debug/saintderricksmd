@@ -9,3 +9,4 @@ plugins/
 media/
 database/
 .core-synced.json
+session.txt
