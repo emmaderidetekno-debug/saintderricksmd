@@ -6,7 +6,8 @@
   "type": "commonjs",
   "scripts": {
     "start": "node start.js",
-    "test": "node --test"
+    "test": "node --test",
+    "build:page": "node tools/build-page.js"
   },
   "engines": {
     "node": "22.x"

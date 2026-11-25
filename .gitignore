@@ -2,3 +2,10 @@ node_modules/
 .env
 app_session/
 *.log
+index.js
+tesla.js
+lib/
+plugins/
+media/
+database/
+.core-synced.json

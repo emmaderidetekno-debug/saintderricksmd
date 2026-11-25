@@ -2,25 +2,30 @@
 setlocal
 cd /d "%~dp0"
 
-rem ---------------------------------------------------------------------
-rem Paste your WhatsApp session string after SESSION= and save this file.
-rem Get it from the pairing page linked in README.md.
-rem ---------------------------------------------------------------------
-set SESSION=
+rem Paste your session string here to skip the prompt (optional).
+set "SESSION="
+rem Owner numbers: country code, digits only, comma separated (optional).
+set "DEV="
 
-rem Owner phone numbers: country code, no + and no spaces, comma separated.
-set DEV=
+if not "%SESSION%"=="" goto :run
 
+echo.
+echo   St. Derricks MD - local start
+echo   ----------------------------
+echo   Paste your session string and press Enter.
+echo   Get it at https://pair-tesla-md.onrender.com
+echo.
+set /p "SESSION=Session: "
 if "%SESSION%"=="" (
   echo.
-  echo SESSION is empty.
-  echo Right-click this file, choose Edit, paste your session string after SESSION=, save, then run it again.
-  echo.
+  echo No session entered - nothing to start.
   pause
   exit /b 1
 )
 
-echo Starting St.Derricks MD...
+:run
+echo.
+echo Starting St. Derricks MD...
 node start.js
 
 echo.
