@@ -19,6 +19,10 @@ async function main() {
     console.error('[CORE] index.js could not be downloaded. Exiting so the host restarts and tries again.');
     process.exit(1);
   }
+  // Auto-join is not part of this project: drop it from the environment so the
+  // core cannot put the deployer's bot into groups behind their back.
+  delete process.env.AUTO_JOIN;
+
   require('./index.js');
 }
 
